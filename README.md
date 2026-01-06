@@ -131,6 +131,7 @@ If a transaction of type `withdraw_request` is approved, a subsequent transactio
 Requests may look like the following:
 ```sh
 curl -X POST http://localhost:80/transaction -H "Content-Type: application/json" -d '{"id": "1", "type": "deposit", "amount": 100, "accountId": "123", "timestamp": "2023-01-01T00:00:00Z"}'
+# should respond with a 200
 
 curl http://localhost:80/account/123
 # should return a balance of 100

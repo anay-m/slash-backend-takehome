@@ -19,4 +19,6 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
+      - SUPABASE_URL=https://btqwawygamlpcqsgkvck.supabase.co
+      - SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ0cXdhd3lnYW1scGNxc2drdmNrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzczODU5OSwiZXhwIjoyMDgzMzE0NTk5fQ.LZil-aQd9DyFc0_3tz0Be2HB9XODzQEtpauJrR9R-Y8
     # Add any other necessary configurations for your app

@@ -206,7 +206,7 @@ interface Transaction {
 }
 
 export async function getBalance(accountId: string): Promise<number> {
-	const response = await fetch(`http:/localhost:80/account/${accountId}`);
+	const response = await fetch(`http://localhost:3000/account/${accountId}`);
 	const data = await response.json();
 	return data.balance;
 }
@@ -230,7 +230,7 @@ async function sendTransaction(
 ): Promise<{ status: number; latency: number }> {
 	const startTime = Date.now();
 	try {
-		const response = await fetch("http://localhost:80/transaction", {
+		const response = await fetch("http://localhost:3000/transaction", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
