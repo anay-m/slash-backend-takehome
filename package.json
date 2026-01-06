@@ -21,7 +21,7 @@
 		"typescript": "^5.6.2"
 	},
 	"dependencies": {
-		"@supabase/supabase-js": "^2.39.0",
+		"@supabase/supabase-js": "^2.39.7",
 		"tinypool": "^1.0.1"
 	}
 }
