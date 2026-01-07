@@ -10,11 +10,14 @@ export default async function runRealtimeAuthTest() {
 	const accountId = crypto.randomUUID();
 
 	const startTime = Date.now();
-	await makeRequests({ maxRps: 10 }, [
+	const depositResult = await makeRequests({ maxRps: 10 }, [
 		createTransaction("deposit", 100, accountId),
 	]);
 
-	const res = await makeRequests({ maxRps: 10 }, [
+	const res = await makeRequests({
+		maxRps: 10,
+		expectedBalances: depositResult.expectedBalances,
+	}, [
 		createTransaction("withdraw_request", 100, accountId),
 		createTransaction("withdraw_request", 100, accountId),
 		createTransaction("withdraw_request", 100, accountId),
